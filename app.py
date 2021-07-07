@@ -314,7 +314,7 @@ if option != "All institutions":
     st.header("**Stock price return distribution for the current year**")
     ax3=sns.distplot(returns.loc['2021-01-01':today][di[option]],color=clr[random.randint(0,len(clr)-1)],bins=70)
     st.pyplot(fig1102)
-st.markdown("<h2 style='text-align: center; color: red;'><b>Stock Price prediction</b></h2>", unsafe_allow_html=True)
+st.markdown("<h2 style='text-align: center; color: red;'><b>Stock Price Prediction</b></h2>", unsafe_allow_html=True)
 pr_option= st.selectbox('Select institution for which you want to predict the stock price:',('Select an institution','Bank of America', 'Apple', 'Google','CitiGroup','Goldman Sachs', 'JPMorgan Chase','Morgan Stanley'))
 preiod=st.slider('How many days you want to predict:',365,545,value=365)
 if pr_option=='Select an institution':
