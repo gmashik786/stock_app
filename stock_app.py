@@ -25,16 +25,15 @@ hide_streamlit_style = """
             footer {visibility: hidden;}
             </style>
             """
-st.markdown("<h2 style='text-align: center; color: red;'><b>Financial Data analysis and Stock Price Prediction</b></h2>", unsafe_allow_html=True)
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+st.markdown("<h2 style='text-align: center; color: red;'><b>Financial Data analysis and Stock Price Prediction</b></h2>", unsafe_allow_html=True)
+
 option = st.selectbox('Select institution name',('All institutions','Bank of America', 'CitiGroup','Goldman Sachs', 'JPMorgan Chase','Morgan Stanley','Apple','Google'))
 today=datetime.now()
 y=today.year
 syear=st.slider('select year from where you want to start:',2000,y,value=2000)
 start = datetime(syear, 1, 1)
 end = today
-
-
 #Bank of America
 #BAC = data.DataReader("BAC", 'yahoo', start, end)
 d1=yf.Ticker("BAC")
