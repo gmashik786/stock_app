@@ -18,6 +18,8 @@ import plotly.graph_objs as go
 from plotly import __version__ 
 import pickle
 import os
+import requests
+return requests.get(url).json()
 #os.environ['TF_XLA_FLAGS'] = '--tf_xla_enable_xla_devices'
 hide_streamlit_style = """
             <style>
